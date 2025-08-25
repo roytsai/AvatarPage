@@ -47,9 +47,9 @@ class _AvatarState extends State<AvatarPage> {
     }
 
     final handler = createStaticHandler(webDir.path, defaultDocument: 'index.html');
-    _server = await shelf_io.serve(handler, '127.0.0.1', 8080);
+    _server = await shelf_io.serve(handler, '127.0.0.1', 5763);
     setState(() {
-      _localUrl = 'http://127.0.0.1:8080/index.html';
+      _localUrl = 'http://127.0.0.1:5763/index.html';
     });
 
     print('Local server started on $_localUrl');
