@@ -62,7 +62,7 @@ class _AvatarState extends State<AvatarPage> {
     if (!indexFile.existsSync()) {
       webDir.createSync(recursive: true);
       print('Copying assets to ${webDir.path}');
-      await _copyAssetFolder('assets/web', webDir.path);
+      await _copyAssetFolder('packages/avatar_page/assets/web', webDir.path);
     }
     print('webDir.path: ${webDir.path}');
     final handler = createStaticHandler(webDir.path, defaultDocument: 'index.html');
