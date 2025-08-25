@@ -33,12 +33,12 @@ class _AvatarState extends State<AvatarPage> {
       'user-agent': 'Flutter Linux WebView',
       'remote-debugging-port': '8888',
       'autoplay-policy': 'no-user-gesture-required',
-      // 'disable-gpu': '',
-      // 'disable-gpu-sandbox': '',
-      'enable-gpu': '',
-      'enable-webgl': '',
-      'ignore-gpu-blocklist': '',
-      'use-gl': 'desktop',
+      'disable-gpu': '',
+      'disable-gpu-sandbox': '',
+      // 'enable-gpu': '',
+      // 'enable-webgl': '',
+      // 'ignore-gpu-blocklist': '',
+      // 'use-gl': 'desktop',
     });
 
     // 設定 WebView 平台為 Linux
@@ -65,7 +65,7 @@ class _AvatarState extends State<AvatarPage> {
       await _copyAssetFolder('packages/avatar_page/assets/web', webDir.path);
     }
     print('webDir.path: ${webDir.path}');
-    final handler = createStaticHandler(webDir.path, defaultDocument: 'index.html');
+    final handler = createStaticHandler('packages/avatar_page/assets/web', defaultDocument: 'index.html');
     _server = await shelf_io.serve(handler, '127.0.0.1', 5763);
     setState(() {
       _localUrl = 'http://127.0.0.1:5763/index.html';
