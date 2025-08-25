@@ -33,12 +33,12 @@ class _AvatarState extends State<AvatarPage> {
       'user-agent': 'Flutter Linux WebView',
       'remote-debugging-port': '8888',
       'autoplay-policy': 'no-user-gesture-required',
-      'disable-gpu': '',
-      'disable-gpu-sandbox': '',
-      // 'enable-gpu': '',
-      // 'enable-webgl': '',
-      // 'ignore-gpu-blocklist': '',
-      // 'use-gl': 'desktop',
+      // 'disable-gpu': '',
+      // 'disable-gpu-sandbox': '',
+      'enable-gpu': '',
+      'enable-webgl': '',
+      'ignore-gpu-blocklist': '',
+      'use-gl': 'desktop',
     });
 
     // 設定 WebView 平台為 Linux
