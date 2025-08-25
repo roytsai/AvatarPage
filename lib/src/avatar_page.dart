@@ -45,8 +45,8 @@ class _AvatarState extends State<AvatarPage> {
       print('Copying assets to ${webDir.path}');
       await _copyAssetFolder('assets/web', webDir.path);
     }
-
-    final handler = createStaticHandler(webDir.path, defaultDocument: 'index.html');
+    print('webDir.path: ${webDir.path}');
+    final handler = createStaticHandler('assets/web', defaultDocument: 'index.html');
     _server = await shelf_io.serve(handler, '127.0.0.1', 5763);
     setState(() {
       _localUrl = 'http://127.0.0.1:5763/index.html';
