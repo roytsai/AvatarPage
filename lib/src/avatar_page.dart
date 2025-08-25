@@ -8,6 +8,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:shelf_static/shelf_static.dart';
 import 'dart:convert';
+import 'package:flutter_linux_webview/flutter_linux_webview.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class AvatarPage extends StatefulWidget {
   const AvatarPage({super.key});
