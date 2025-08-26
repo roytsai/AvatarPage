@@ -52,10 +52,10 @@ class _AvatarState extends State<AvatarPage> {
     await _copyAssetFolder('packages/avatar_page/assets/web', webDir.path);
 
     print('webDir.path: ${webDir.path}');
-    final handler = createStaticHandler(webDir.path, defaultDocument: 'index.html');
+    final handler = createStaticHandler(webDir.path, defaultDocument: 'index2.html');
     _server = await shelf_io.serve(handler, '127.0.0.1', 5763);
     setState(() {
-      _localUrl = 'http://127.0.0.1:5763/index.html';
+      _localUrl = 'http://127.0.0.1:5763/index2.html';
     });
 
     print('Local server started on $_localUrl');

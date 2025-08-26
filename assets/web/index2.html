@@ -1,0 +1,32 @@
+<!-- assets/web/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avatar Viewer</title>
+    <script type="module" src="web-avatar-controller.iife.js"></script>
+    <script type="module" src="https://dswsstaging.asus.com/restasr_streaming/static/Asus_SpeechRecognition.js"></script>
+    <script type="module" src="https://cdn.webrtc-experiment.com/MediaStreamRecorder.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          height: 100%;
+        }
+        avatar-widget {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+    </style>
+</head>
+<body>
+
+<avatar-controller-widget id="avatar" url="Eye_Head_YES_Standing_catwalkgroup_position_fixSize.glb"></avatar-controller-widget>
+
+</body>
+</html>
